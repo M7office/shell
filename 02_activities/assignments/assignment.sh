@@ -36,7 +36,7 @@ cd data
 mv rawdata raw
 
 # 3. List the contents of the ./data/raw directory
-ls raw/
+ls ~/shell/02_activities/assignments/newproject/data/raw
 
 # 4. Create the directory ./data/processed, 
 #    then create the following sub-directories within it: server_logs, user_logs, and event_logs
@@ -46,6 +46,7 @@ mkdir -p processed/server_logs processed/user_logs processed/event_logs
 
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
+cd ~/shell/02_activities/assignments/newproject/data/raw
 mv ~/shell/02_activities/assignments/newproject/data/raw/server* ~/shell/02_activities/assignments/newproject/data/processed/server_logs
 
 # 6. Repeat the above step for user logs and event logs
