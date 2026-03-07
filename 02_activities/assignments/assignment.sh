@@ -47,20 +47,18 @@ mkdir -p processed/server_logs processed/user_logs processed/event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 cd ~/shell/02_activities/assignments/newproject/data/raw
-cp ./"server*.log" ~/shell/02_activities/assignments/newproject/data/processed/server_logs
+cp ./server* ~/shell/02_activities/assignments/newproject/data/processed/server_logs
 
 # 6. Repeat the above step for user logs and event logs
-cp ./"event*.log" ~/shell/02_activities/assignments/newproject/data/processed/event_logs
-cp ./"user*.log" ~/shell/02_activities/assignments/newproject/data/processed/user_logs
+cp ./event* ~/shell/02_activities/assignments/newproject/data/processed/event_logs
+cp ./user* ~/shell/02_activities/assignments/newproject/data/processed/user_logs
 
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 cd ~/shell/02_activities/assignments/newproject/data/processed/user_logs
-rm *ipaddr*
-rm ipaddr*
+rm ./*ipaddr*
 cd ~/shell/02_activities/assignments/newproject/data/raw
-rm *ipaddr*
-rm ipaddr*
+rm ./*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 cd ~/shell/02_activities/assignments/newproject/data
