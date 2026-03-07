@@ -36,12 +36,12 @@ cd data
 mv rawdata raw
 
 # 3. List the contents of the ./data/raw directory
-cd raw
-ls 
+ls raw/
 
 # 4. Create the directory ./data/processed, 
 #    then create the following sub-directories within it: server_logs, user_logs, and event_logs
 cd ~/shell/02_activities/assignments/newproject/data
+mkdir processed
 mkdir -p processed/server_logs processed/user_logs processed/event_logs
 
 
