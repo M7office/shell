@@ -46,12 +46,12 @@ mkdir -p processed/server_logs processed/user_logs processed/event_logs
 
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
-cd ~/shell/02_activities/assignments/newproject/data/processed
-cp ~/shell/02_activities/assignments/newproject/data/raw/"server*.log" ~/shell/02_activities/assignments/newproject/data/processed/server_logs
+cd ~/shell/02_activities/assignments/newproject/data/raw
+cp ./"server*.log" ~/shell/02_activities/assignments/newproject/data/processed/server_logs
 
 # 6. Repeat the above step for user logs and event logs
-cp ~/shell/02_activities/assignments/newproject/data/raw/"event*.log" ~/shell/02_activities/assignments/newproject/data/processed/event_logs
-cp ~/shell/02_activities/assignments/newproject/data/raw/"user*.log" ~/shell/02_activities/assignments/newproject/data/processed/user_logs
+cp ./"event*.log" ~/shell/02_activities/assignments/newproject/data/processed/event_logs
+cp ./"user*.log" ~/shell/02_activities/assignments/newproject/data/processed/user_logs
 
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
